@@ -1,6 +1,19 @@
-n = int(input())
-cnt = 0
-for i in range(n + 1):
-    cnt += i**2
+class Mynum():
+    def __iter__(self):
+        self.a = 0
+        return self
+    def __next__(self):
+        if self.a <= x:
+            y = self.a
+            self.a += 1
+            return y*y
+        else:
+            raise StopIteration
 
-print(cnt)
+cl = Mynum()
+myiter = iter(cl)
+
+x = int(input())
+
+for y in myiter:
+    print(y)
