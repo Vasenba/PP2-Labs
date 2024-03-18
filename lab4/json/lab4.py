@@ -1,6 +1,6 @@
 import json
 
-with open('data.json') as file:
+with open('json_data') as file:
     json_data = json.load(file)
 
 
