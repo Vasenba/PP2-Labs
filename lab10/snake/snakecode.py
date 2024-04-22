@@ -50,6 +50,14 @@ class Food:
             self.location = Point(random.randint(0, WIDTH//BLOCK_SIZE-1), random.randint(0, HEIGHT//BLOCK_SIZE-1))
             if not any(point.x == self.location.x and point.y == self.location.y for point in self.wall.body):
                 break 
+
+    def move(self):
+        self.update_location()
+
+    def draw(self):
+        rect = pygame.Rect(BLOCK_SIZE * self.location.x, BLOCK_SIZE * self.location.y, BLOCK_SIZE, BLOCK_SIZE)
+        pygame.draw.rect(SCREEN, (0, 255, 0), rect)
+
             
     
 
