@@ -1,5 +1,5 @@
 import psycopg2
-from config import load_config
+from lab11.config import load_config
 
 def insert_people(name, surname, phone):
     sql = "INSERT INTO PhoneBook(Name, Surname, Phone) VALUES(%s, %s, %s) ON CONFLICT (Name, Surname, Phone) DO NOTHING"
